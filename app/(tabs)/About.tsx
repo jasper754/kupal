@@ -1,46 +1,45 @@
 import { StyleSheet, Platform } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import { Collapsible } from '@/components/Collapsible';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function AboutScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#8B0000', dark: '#5A0000' }}
+      headerBackgroundColor={{ light: '#FFD700', dark: '#8B0000' }} 
       headerImage={
         <MaterialCommunityIcons
           size={310}
-          color="#FFA500" 
+          color="#FF4500" 
           name="food-drumstick" 
           style={styles.headerImage}
         />
       }>
-      
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title" style={styles.title}>🍗 Welcome to Cluck'N'Crunch! 🔥</ThemedText>
+        <ThemedText type="title" style={styles.title}>🐔 About Our Chicken Shop 🍗</ThemedText>
       </ThemedView>
       <ThemedText style={styles.description}>
-        The crispiest, juiciest fried chicken in town! Check out our services below.
+        Welcome to Cluck'N'Crunch! We serve the crispiest, juiciest fried chicken in town.
       </ThemedText>
 
-      <Collapsible title="🚚 Delivery">
+      <Collapsible title="Our Story">
         <ThemedText>
-          Get your favorite fried chicken delivered right to your door! Fast and fresh.
+          Started from a small kitchen, we have grown into a local favorite for chicken lovers!
         </ThemedText>
       </Collapsible>
 
-      <Collapsible title="🍽️ Dine-In">
+      <Collapsible title="Secret Recipe">
         <ThemedText>
-          Visit our cozy restaurant and enjoy a meal hot and fresh off the fryer!
+          Our chicken is marinated with a secret blend of spices and cooked to crispy perfection.
         </ThemedText>
       </Collapsible>
 
-      <Collapsible title="🎉 Catering">
+      <Collapsible title="Our Promise">
         <ThemedText>
-          Hosting a party? Let us handle the food with our catering service.
+          We use only the freshest ingredients and 100% farm-raised chicken.
         </ThemedText>
       </Collapsible>
     </ParallaxScrollView>
@@ -55,18 +54,18 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 20,
+    gap: 8,
+    marginTop: 20, 
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#FFA500',
+    color: '#8B0000', 
   },
   description: {
     fontSize: 16,
     marginTop: 10,
-    color: '#FFD700',
+    color: '#FF4500', 
     textAlign: 'center',
   },
 });
